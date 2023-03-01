@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>::Mid Valleyy::</title>
+    <title>QmarT</title>
     <meta name="google-site-verification" content="KlFD8HcyZl4za4AVCB5vKHA5bd--3nl7yzZSYVKZnVM" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -54,7 +54,7 @@
 
 
 
-<script src="{{ asset('js/backend.js?ver=1.2.3') }}"></script>
+<script src="{{ asset('js/backend.js?ver=1.0.0') }}"></script>
 
 
 

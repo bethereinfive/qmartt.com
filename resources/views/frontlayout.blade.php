@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>::Mid Valleyy::</title>
+    <title>QmarT</title>
     <meta name="google-site-verification" content="KlFD8HcyZl4za4AVCB5vKHA5bd--3nl7yzZSYVKZnVM" />
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend2/static/img/smallLogo.png') }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -75,7 +75,7 @@ console.log("{{ Auth::user() }}")
         </script>
 
 
-    <script src="{{ asset('js/frontend.js?ver=1.2.3') }}"></script>
+    <script src="{{ asset('js/frontend.js?ver=1.0.0') }}"></script>
 
 
 
