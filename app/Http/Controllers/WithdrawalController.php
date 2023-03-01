@@ -51,33 +51,18 @@ class WithdrawalController extends Controller
          if($userbalance==null) $userbalance = 0;
 
          if($status=='reject'){
-
             $amount = $userbalance+$withdrawal->amount;
-
-             $plans = Plan::where('start_balance','<=',$amount)->where('end_balance','>=',$amount)->where('status','active')->first();
-
               $user->update([
-                  'plan_id'=>$plans->id,
+                  'plan_id'=>planId($amount),
                   'balance'=>$amount,
 
                 ]);
+                transitionCreate($userid,$withdrawal->amount,0,$amount,'Increase','Withdraw Trx','Withdraw Cancel','');
             }
 
-        //   if($status=='approved'){
-
-        //       $user->update([
-        //           'plan_id'=>$plans->id,
-        //           'balance'=>$amount,
-
-        //         ]);
-        //     }else{
-
-        //         $user->update([
-        //             'plan_id'=>$plans->id,
-        //             'balance'=>$amount,
-
-        //           ]);
-        //     }
+          if($status=='approved'){
+            transitionCreate($userid,$withdrawal->amount,0,$userbalance,'decrease','Withdraw Trx','Withdraw Approve','');
+            }
 
 
 
@@ -105,7 +90,7 @@ class WithdrawalController extends Controller
     {
         $user_id = $request->user_id;
         $dpcount = Deposit::where(['user_id'=>$user_id,'status'=>'approved'])->count();
-        if($dpcount>0){
+        // if($dpcount>0){
 
 
 
@@ -130,9 +115,9 @@ class WithdrawalController extends Controller
         return Withdrawal::create($data);
 
 
-    }else{
-        return 422;
-    }
+    // }else{
+    //     return 422;
+    // }
 
     }
 

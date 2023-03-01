@@ -16,7 +16,7 @@
    </div>
     <p class="orderDetials mt-5">অর্ডার নাম্বর : {{ form.orderid }}</p>
     <p class="orderDetials">অর্ডারের পরিমাণ : {{ form.amount }} TK </p>
-<router-link :to="{name:'Authuser'}" style="width: 100%;margin: 20px 0px;background: black;color: white;padding: 8px 4px;border-radius: 30px;display: block;text-align: center;">অর্ডার বন্ধ করুন</router-link>
+<a href="/dashboard/user" style="width: 100%;margin: 20px 0px;background: black;color: white;padding: 8px 4px;border-radius: 30px;display: block;text-align: center;">অর্ডার বন্ধ করুন</a>
 
 </main>
 

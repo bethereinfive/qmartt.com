@@ -23,6 +23,47 @@ class UserController extends Controller
     //     $this->middleware('auth');
     // }
 
+    public function paymentUrl(Request $request)
+    {
+        $amount =$request->amount;
+
+$metadata = json_encode($request->all());
+$curl = curl_init();
+$panel_url = env('UDDOKTAPY_URL');
+$Api_Key = env('UDDOKTAPY_API_KEY');
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "$panel_url/api/checkout-v2",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'POST',
+  CURLOPT_POSTFIELDS =>'{
+     "full_name": "Freelancer Nishad",
+     "email": "freelancernishad123@gmail.com",
+     "amount": "'.$amount.'",
+     "metadata": '.$metadata.',
+     "redirect_url": "'.url('api/success').'",
+     "cancel_url": "'.url('api/cancel').'",
+     "webhook_url": "'.url('api/webhook').'"
+}
+',
+  CURLOPT_HTTPHEADER => array(
+    "RT-UDDOKTAPAY-API-KEY: $Api_Key",
+    "Content-Type: application/json"
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+return $response;
+
+    }
+
 
 public function referfunction($id)
 {
@@ -217,6 +258,7 @@ public function referfunction($id)
         $todayDate = date('Y-m-d');
          $YesterdayDate =  date('Y-m-d',strtotime("-1 days"));
         $registration_bonus = Transition::where(['user_id'=>$user->id,'remark'=>'registration_bonus'])->sum('amount');
+        $deposit_commisition = Transition::where(['user_id'=>$user->id,'remark'=>'deposit_commisition'])->count();
         $taskearn = Task::where(['user_id'=>$user->id])->sum('task_comisition');
         $todayearn = Task::where(['user_id'=>$user->id,'date'=>$todayDate])->sum('task_comisition');
         $YesterdayEarn = Task::where(['user_id'=>$user->id,'date'=>$YesterdayDate])->sum('task_comisition');
@@ -224,6 +266,7 @@ public function referfunction($id)
 
        $rows = [
            'new_regitration'=>settings()->new_regitration,
+           'deposit_commisition'=>$deposit_commisition,
            'registration_bonus'=>$registration_bonus,
            'taskearn'=>$taskearn,
            'todayearn'=>$todayearn,
@@ -568,18 +611,18 @@ return 1;
 
         $name = $request->name;
         if($name=='add'){
-            $add = balanceIncrease($user->balance, $add);
-            transitionCreate($user->id,$add,0,$add,'increase','dfg','deposit_commisition','');
+            $addTotal = balanceIncrease($user->balance, $add);
+            transitionCreate($user->id,$add,0,$addTotal,'increase','dfg','deposit_commisition','');
         }else{
-            $add = balanceDecrease($user->balance, $add);
-            transitionCreate($user->id,$add,0,$add,'decrease','dfg','Fine','');
+            $addTotal = balanceDecrease($user->balance, $add);
+            transitionCreate($user->id,$add,0,$addTotal,'decrease','dfg','Fine','');
         }
 
 // return $add;
         // return planId($LevelOneNewBalance);
         $user->update([
-            'balance' => $add,
-            'plan_id' => planId($add),
+            'balance' => $addTotal,
+            'plan_id' => planId($addTotal),
         ]);
 
     }

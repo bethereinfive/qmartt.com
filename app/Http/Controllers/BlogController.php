@@ -11,6 +11,13 @@ class blogController extends Controller
 {
     public function index(Request $request)
     {
+        $type = $request->type;
+
+if($type=='random'){
+    return blog::inRandomOrder()->first();
+}
+
+
         $cat = $request->cat;
         if($cat){
             $category = blog_category::where('slug',$cat)->first();
@@ -30,7 +37,7 @@ class blogController extends Controller
 
 
             if($ImagesCount>1){
-                $data['Images'] =  fileupload($request->Images,"blogs/",200,200);
+                $data['Images'] =  fileupload($request->Images,"blogs/",200,150);
             }
 
         if($id){
