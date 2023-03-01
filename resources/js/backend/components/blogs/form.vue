@@ -176,23 +176,21 @@ export default {
 
 
 
-       getCategory(){
+      async getCategory(){
+        var res = await this.callApi('get',`/api/get/category/list`,[])
 
-                axios.get(`/api/get/category/list`)
-                .then((res)=>{
 
                     this.categorys = res.data
-                })
+
 
         },
 
-       getunionInfo(id=''){
+        async getunionInfo(id=''){
+            var res = await this.callApi('get',`/api/update/blog/${id}`,[])
 
-                axios.get(`/api/update/blog/${id}`)
-                .then((res)=>{
 
                     this.form = res.data
-                })
+
 
         },
 
