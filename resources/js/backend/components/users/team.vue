@@ -200,7 +200,7 @@ export default {
             row:{},
             lavel:
                 [{"id":1,"name":"Level1","task_commisition":"8","comission":"10","created_at":null,"updated_at":"2022-08-30T19:50:53.000000Z"},{"id":2,"name":"Level2","task_commisition":"4","comission":"5","created_at":null,"updated_at":"2022-08-30T19:51:11.000000Z"},{"id":3,"name":"Level3","task_commisition":"2","comission":"2","created_at":null,"updated_at":"2022-08-30T19:51:19.000000Z"}],
-                ref: 'https://midvalleyy.com/register',
+                ref: 'https://qmartt.com/register',
 
             popup:false
         }
@@ -213,7 +213,7 @@ export default {
             var id = localStorage.getItem('userid');
             var resD = await this.callApi('get',`/api/front/teamdetails?id=${id}`,[]);
             this.row = resD.data;
-            this.ref = 'https://midvalleyy.com/register?ref='+resD.data.user.username
+            this.ref = 'https://qmartt.com/register?ref='+resD.data.user.username
 // console.log(window.location)
         },
 
