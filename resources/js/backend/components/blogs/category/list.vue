@@ -50,7 +50,7 @@ export default {
             sortstatus:false,
             Filter:true,
             addNew:'categoryform',
-            FilterOn:false,
+            FilterOn:[],
             PerPage:false,
             deleteRoute:'/api/get/category/delete',
             editRoute:'categoryedit',
@@ -101,7 +101,7 @@ export default {
         async sonodname(){
             this.preLooding = true
 
-            var res = await this.callApi('get',`/api/get/category/listt`,[])
+            var res = await this.callApi('get',`/api/get/category/list`,[])
 
                   this.items = res.data
                   this.TotalRows = `${this.items.length}`;
