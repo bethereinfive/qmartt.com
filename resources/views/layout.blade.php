@@ -45,7 +45,7 @@
 <body>
 
     <div id="app">
-        <component :is="$route.meta.layout || 'div'"   :user="{{Auth::user()}}"  :roles="{{ $roles }}">
+        <component :is="$route.meta.layout || 'div'"   :users="{{Auth::user()}}"  :roles="{{ $roles }}">
             <router-view />
           </component>
 
@@ -54,7 +54,7 @@
 
 
 
-<script src="{{ asset('js/backend.js?ver=1.0.2') }}"></script>
+<script src="{{ asset('js/backend.js?ver=1.0.3') }}"></script>
 
 
 

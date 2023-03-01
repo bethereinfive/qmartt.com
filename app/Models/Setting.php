@@ -13,6 +13,19 @@ class Setting extends Model
         'notice',
         'new_regitration',
         'refer_bonus',
-        'a'
+        'ref_count',
+        'a',
+        'min_deposit',
+        'telegroup',
+        'telesupport1',
+        'telesupport2',
+        'telesupport3',
+        'worktime',
+        'withdrawtext',
+        'recharagetext',
+        'slide1',
+        'slide2',
+        'slide3',
+        'slide4',
     ];
 }

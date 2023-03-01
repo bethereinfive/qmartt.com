@@ -52,6 +52,137 @@
                                         </div>
                                     </div>
 
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="">Refer Limit</label>
+                                            <!-- <vue-editor v-model="form.notice"></vue-editor> -->
+                                            <input v-model="form.ref_count" class="form-control"/>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="">Min Deposit</label>
+                                            <!-- <vue-editor v-model="form.notice"></vue-editor> -->
+                                            <input v-model="form.min_deposit" class="form-control"/>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="">Telegram Group</label>
+                                            <!-- <vue-editor v-model="form.notice"></vue-editor> -->
+                                            <input v-model="form.telegroup" class="form-control"/>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="">Telegram channel</label>
+                                            <!-- <vue-editor v-model="form.notice"></vue-editor> -->
+                                            <input v-model="form.telesupport1" class="form-control"/>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="">Telegram Support 1</label>
+                                            <!-- <vue-editor v-model="form.notice"></vue-editor> -->
+                                            <input v-model="form.telesupport2" class="form-control"/>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="">Telegram Support 2</label>
+                                            <!-- <vue-editor v-model="form.notice"></vue-editor> -->
+                                            <input v-model="form.telesupport3" class="form-control"/>
+
+                                        </div>
+                                    </div>
+
+                                    <!-- <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="">Withdraw Text</label>
+                                            <input v-model="form.withdrawtext" class="form-control"/>
+                                        </div>
+                                    </div> -->
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="">Recharge Text</label>
+                                            <!-- <vue-editor v-model="form.notice"></vue-editor> -->
+                                            <input v-model="form.recharagetext" class="form-control"/>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="">Task Time</label>
+                                            <!-- <vue-editor v-model="form.notice"></vue-editor> -->
+                                            <input v-model="form.worktime" class="form-control"/>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-form-label">Slider 1
+                                        </label>
+
+                                            <input type="file" class="form-control" id="slide1"  @change="FileSelected($event, 'slide1')"  />
+                                            <label for="slide1">
+                                            <b-img thumbnail fluid :src="form.slide1" alt="Image 3"></b-img>
+                                            </label>
+                                    </div>
+                                </div>
+
+
+                                    <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-form-label">Slider 2
+                                        </label>
+
+                                            <input type="file" class="form-control" id="slide2"  @change="FileSelected($event, 'slide2')"  />
+                                            <label for="slide3">
+                                            <b-img thumbnail fluid :src="form.slide2" alt="Image 3"></b-img>
+                                            </label>
+                                    </div>
+                                </div>
+
+
+                                    <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-form-label">Slider 3
+                                        </label>
+
+                                            <input type="file" class="form-control" id="slide3"  @change="FileSelected($event, 'slide3')"  />
+                                            <label for="slide3">
+                                            <b-img thumbnail fluid :src="form.slide3" alt="Image 3"></b-img>
+                                            </label>
+                                    </div>
+                                </div>
+
+
+                                    <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-form-label">Slider 4
+                                        </label>
+
+                                            <input type="file" class="form-control" id="slide4"  @change="FileSelected($event, 'slide4')"  />
+                                            <label for="slide4">
+                                            <b-img thumbnail fluid :src="form.slide4" alt="Image 3"></b-img>
+                                            </label>
+                                    </div>
+                                </div>
+
 
                             <div class="col-md-12 mt-4">
 
@@ -78,11 +209,32 @@ export default {
                 notice:'',
                 new_regitration:'',
                 refer_bonus:'',
+                min_deposit:'',
 
             }
         }
     },
     methods: {
+
+
+        FileSelected($event, parent_index){
+
+
+
+let file = $event.target.files[0];
+if (file.size > 5048576) {
+    Notification.image_validation();
+} else {
+    let reader = new FileReader;
+    reader.onload = event => {
+        this.form[parent_index] = event.target.result
+        // console.log(event.target.result);
+    };
+    reader.readAsDataURL(file)
+}
+        //   console.log($event.target.result);
+},
+
         async getData(){
 
             var res = await this.callApi('get',`/api/admin/setting/1`,[]);

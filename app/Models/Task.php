@@ -11,6 +11,7 @@ class Task extends Model
     protected $fillable = [
         'orderNumber',
         'user_id',
+        'blog_id',
         'task_comisition',
         'date',
     ];

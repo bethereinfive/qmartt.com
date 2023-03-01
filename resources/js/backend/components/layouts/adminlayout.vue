@@ -227,7 +227,7 @@
 </template>
 <script>
 export default {
-     props: ['user','roles'],
+     props: ['users','roles'],
     created() {
 
 
@@ -248,7 +248,7 @@ export default {
 
 
 
-       this.$store.commit('setUpdateUser', this.user)
+       this.$store.commit('setUpdateUser', this.users)
     //    this.$store.commit('setUserPermission', JSON.parse(this.permission.permission))
        this.$store.commit('setUserRoles', this.roles)
 

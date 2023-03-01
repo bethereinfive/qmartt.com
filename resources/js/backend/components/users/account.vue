@@ -46,7 +46,7 @@
                                 <p data-v-43965e0e="">Join us customer service</p>
                                 <!-- <p data-v-43965e0e="">Don't miss the tips to yield high income</p> -->
                             </div>
-                            <a target="_blank" href="https://t.me/MidValleyCustomer1" data-v-43965e0e="" class="btn">Join Now</a>
+                            <a target="_blank" :href="settings.telegroup" data-v-43965e0e="" class="btn">Join Now</a>
                         </div>
                         <!-- <div data-v-43965e0e="" class="behalf">
                             <p data-v-43965e0e="" class="p1"><span data-v-43965e0e="">Top up for your friends</span></p>
@@ -150,6 +150,7 @@
 export default {
     data(){
         return {
+            settings:{},
               row: {
                 plans:{},
                 deposit:{},
@@ -164,6 +165,9 @@ export default {
     methods: {
           async getData() {
              var id = localStorage.getItem('userid');
+             var resN = await this.callApi('get',`/api/admin/setting`,[])
+              this.settings = resN.data
+
             var res = await this.callApi('get', `/api/admin/user/${id}`, []);
             this.row = res.data;
 

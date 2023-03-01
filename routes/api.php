@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PlanController;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\UserController;
@@ -11,8 +14,8 @@ use App\Http\Controllers\GatewayController;
 use App\Http\Controllers\SettingController;
 use  App\Http\Controllers\api\authController;
 use App\Http\Controllers\TransitionController;
+use App\Http\Controllers\UddoktapayController;
 use App\Http\Controllers\WithdrawalController;
-use App\Http\Controllers\BlogController;
 use App\Http\Controllers\BlogCategoryController;
 
 /*
@@ -32,6 +35,24 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 
+Route::post('refound', function (Request $request) {
+
+    return $request->all();
+
+});
+
+// Route::post('webhook', function (Request $request) {
+
+//     $data = $request->all();
+
+//     $data = json_encode($data);
+
+//     $fileName = time(). '_datafile.json';
+//     File::put(public_path($fileName),$data);
+//     return Response::download(public_path($fileName));
+
+// });
+
 
 Route::group([
     'middleware' => 'api',
@@ -43,6 +64,17 @@ Route::group([
     Route::post('refresh', [authController::class,'refresh']);
     Route::post('me', [authController::class,'login']);
 });
+
+
+
+
+// Route::post('get/payment/url', [UserController::class,'paymentUrl']);
+Route::post( 'pay', [UddoktapayController::class, 'pay'] )->name( 'uddoktapay.pay' );
+// Route::post( 'webhook', [UddoktapayController::class, 'webhook'] )->name( 'uddoktapay.webhook' );
+Route::post('webhook', [DepositController::class,'paymentwebhook']);
+
+
+Route::get('getPayment/data', [GatewayController::class,'getPayment']);
 
 
 Route::get('count/username/check', [authController::class,'usernamecheck']);
