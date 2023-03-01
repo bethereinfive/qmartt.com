@@ -119,7 +119,7 @@ Route::resources([
 //Category
 
 Route::get('get/category/list',[BlogCategoryController::class,'index']);
-Route::get('get/category/delete/{id}',[BlogCategoryController::class,'deletecategory']);
+Route::post('get/category/delete/{id}',[BlogCategoryController::class,'deletecategory']);
 Route::get('update/category/{id}',[BlogCategoryController::class,'getcategory']);
 Route::post('update/category',[BlogCategoryController::class,'updatecategory']);
 
@@ -127,7 +127,7 @@ Route::post('update/category',[BlogCategoryController::class,'updatecategory']);
 //blogs
 
 Route::get('get/blog/list',[BlogController::class,'index']);
-Route::delete('get/blog/delete/{id}',[BlogController::class,'deleteblog']);
+Route::post('get/blog/delete/{id}',[BlogController::class,'deleteblog']);
 Route::get('update/blog/{id}',[BlogController::class,'getblog']);
 Route::post('update/blog',[BlogController::class,'updateblog']);
 Route::get('reset/blog',[BlogController::class,'resetblog']);

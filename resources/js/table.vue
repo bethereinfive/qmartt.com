@@ -550,7 +550,7 @@ export default {
                 confirmButtonText: `Yes, Delete it!`
             }).then(async (result) => {
                 if (result.isConfirmed) {
-                    var res = await this.callApi('delete', `${this.DeleteRoute}/${item.id}`, []);
+                    var res = await this.callApi('post', `${this.DeleteRoute}/${item.id}`, []);
                     Notification.customdelete(`Your data has been Deleted!`);
                     this.$emit('event-name')
                 }
