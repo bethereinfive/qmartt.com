@@ -63,7 +63,7 @@
                 </div>
                 <div class="container-fluid">
                     <div class="form-group">
-                        <label><span class="require">*</span> Bank account (Bkash/Nagod/USDT)</label>
+                        <label><span class="require">*</span> Bank account (Bkash/Nagod/Rocket)</label>
                         <input type="text" v-model="row.user.Bank_account" class="form-control"
                             placeholder="Please add an account" :disabled="readonly" required>
                     </div>

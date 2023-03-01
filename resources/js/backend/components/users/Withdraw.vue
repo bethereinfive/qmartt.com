@@ -25,14 +25,16 @@
             <!---->
             <div data-v-4cd34ac9="">
                 <div data-v-4cd34ac9="" id="withdrawal">
-                    <div data-v-4cd34ac9="" class="rules">
+
+                    <!--  <div data-v-4cd34ac9="" class="rules">
                         <p data-v-4cd34ac9="" class="title">Instruction for withdrawal</p>
                         <div data-v-4cd34ac9="" class="content">
                             <p data-v-4cd34ac9="">1. উড্র টাইম ৭২ ঘন্টা.</p>
                             <p data-v-4cd34ac9="">2. প্রসেসিং টাইম ২৪ ঘন্টা.</p>
                             <p data-v-4cd34ac9="">3. মিনিমাম উড্র ৩০০ টাকা.</p>
                         </div>
-                    </div>
+                    </div> -->
+
                     <div data-v-4cd34ac9="" class="bankTabBar_box">
                         <!-- <p data-v-4cd34ac9="" class="title">Choose the type</p> -->
                         <div data-v-4cd34ac9="" class="bank_sel">

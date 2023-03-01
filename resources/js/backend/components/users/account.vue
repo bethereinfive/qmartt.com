@@ -85,6 +85,12 @@
                         </div> -->
 
                         <router-link data-v-43965e0e="" :to="{name:'RechangePass'}" class="item"><p data-v-43965e0e="">Change the password</p></router-link>
+
+
+                        <a v-if="settings.telegroup" data-v-43965e0e=""  :href="settings.telegroup" class="item"><p data-v-43965e0e="">Official Telegram Group</p></a>
+                        <a v-if="settings.telesupport1" data-v-43965e0e=""  :href="settings.telesupport1" class="item"><p data-v-43965e0e="">Official Telegram Channel</p></a>
+                        <a v-if="settings.telesupport2" data-v-43965e0e=""  :href="settings.telesupport2" class="item"><p data-v-43965e0e="">Customer Service</p></a>
+                        <a v-if="settings.telesupport3" data-v-43965e0e=""  :href="settings.telesupport3" class="item"><p data-v-43965e0e="">Customer Service</p></a>
                         <!-- <a data-v-43965e0e="" href="/page?title=Introduction&amp;src=https%3A%2F%2Fh5.webfxx.com%2Fcertificate%2Findex.html" class="item"><p data-v-43965e0e="">Introduction</p></a> -->
                         <!-- <a data-v-43965e0e="" href="/page?title=Play%20guide&amp;src=https%3A%2F%2Fh5.webfxx.com%2FhowToPlay%2Findex.html" class="item"><p data-v-43965e0e="">Play guide</p></a> -->
                         <a data-v-43965e0e="" href="#" class="item"><p data-v-43965e0e="">About us</p></a>
