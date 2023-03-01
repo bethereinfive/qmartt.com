@@ -54,11 +54,11 @@
 
 
 
-<script src="{{ asset('js/backend.js?ver=1.0.4') }}"></script>
+<script src="{{ asset('js/backend.js?ver=1.0.40') }}"></script>
 
 
 
-{{--
+{{--0
 <!-- Popper js -->
 <script src="{{ asset('dashboard_asset/js/popper.min.js') }}"></script>
 <!-- Bootstrap js -->
