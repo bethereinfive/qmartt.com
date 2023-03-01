@@ -45,7 +45,7 @@
                         <div data-v-8c1d3ba0="" id="loginbtn"  v-if="loading">Please wait....</div>
                         <div data-v-8c1d3ba0="" id="loginbtn" v-else  @click='register'>Register</div>
                         <div data-v-8c1d3ba0="" class="register"><router-link :to="{name:'/login'}" data-v-8c1d3ba0="" class="">Login</router-link></div>
-                        <div data-v-8c1d3ba0="" class="register"><a :href="$asseturl+'Mid_Valley.apk'" data-v-8c1d3ba0="" class="">Download Our Android app</a></div>
+                        <div data-v-8c1d3ba0="" class="register"><a :href="$asseturl+'QmarT.apk'" data-v-8c1d3ba0="" class="">Download Our Android app</a></div>
 
                     </div>
                 </div>

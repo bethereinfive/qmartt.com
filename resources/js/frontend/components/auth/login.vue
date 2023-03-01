@@ -26,7 +26,7 @@
                         <div data-v-8c1d3ba0="" id="loginbtn" v-else  @click='login'>Sign in</div>
 
                         <div data-v-8c1d3ba0="" class="register"><router-link :to="{name:'register'}" data-v-8c1d3ba0="" class="">Register</router-link></div>
-                        <div data-v-8c1d3ba0="" class="register"><a :href="$asseturl+'Mid_Valley.apk'" data-v-8c1d3ba0="" class="">Download Our Android app</a></div>
+                        <div data-v-8c1d3ba0="" class="register"><a :href="$asseturl+'QmarT.apk'" data-v-8c1d3ba0="" class="">Download Our Android app</a></div>
 
                     </div>
                 </div>
