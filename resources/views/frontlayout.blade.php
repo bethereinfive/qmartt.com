@@ -29,7 +29,7 @@
             }
         </style>
 
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css?ver=1.0.0') }}">
 </head>
 <body>
     <div id="app">
