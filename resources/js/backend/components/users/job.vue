@@ -198,6 +198,26 @@
               indexx++
           }, 5000);
 
+
+
+          if(User.dateformat()[9]<=23){
+            if(User.dateformat()[9]>=10){
+                // this.$router.push({ name: 'Authuser' });
+            }else{
+                alert('কাজের সময় সকাল ১০:০০ থেকে রাত ১২:০০ টা পর্যন্ত')
+                this.$router.push({ name: 'Authuser' });
+            }
+        }else{
+            alert('কাজের সময় সকাল ১০:০০ থেকে রাত ১২:০০ টা পর্যন্ত')
+            this.$router.push({ name: 'Authuser' });
+        }
+
+
+
+
+
+
+
       },
       data(){
           return {

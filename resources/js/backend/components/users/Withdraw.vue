@@ -280,22 +280,23 @@ export default {
             }, 5000);
             // 10:00<10:01
             // console.log(User.dateformat()[9]);
-            // if(User.dateformat()[9]<=17){
-            //     if(User.dateformat()[9]>=10){
+
+             if(User.dateformat()[9]<=13){
+                 if(User.dateformat()[9]>=10){
             setTimeout(() => {
                 if (!this.form.method) {
                     alert('Please add Bank card first');
                     this.$router.push({ name: 'bankAccount' });
                 }
             }, 5000);
-            //     }else{
-            //     alert('প্রত্যাহার সময় সপ্তাহের সোমবার থেকে শুক্রবার সকাল১০:০০ থেকে সন্ধা ০৫:০০ টা পর্যন্ত')
-            //         this.$router.push({ name: 'Authuser' });
-            //     }
-            // }else{
-            //     alert('প্রত্যাহার সময় সপ্তাহের সোমবার থেকে শুক্রবার সকাল১০:০০ থেকে সন্ধা ০৫:০০ টা পর্যন্ত')
-            //     this.$router.push({ name: 'Authuser' });
-            // }
+                 }else{
+                 alert('প্রত্যাহার সময় সকাল ১০:০০ থেকে দুপুর ০২:০০ টা পর্যন্ত')
+                    this.$router.push({ name: 'Authuser' });
+                 }
+             }else{
+                 alert('রত্যাহার সময় সকাল ১০:০০ থেকে দুপুর ০২:০০ টা পর্যন্ত')
+                 this.$router.push({ name: 'Authuser' });
+             }
         },
     }
 
