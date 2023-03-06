@@ -7,7 +7,7 @@
 
                 <div data-v-8c1d3ba0="" id="login">
                     <p data-v-8c1d3ba0="" class="title">Welcome to QmarT</p>
-                    <p data-v-8c1d3ba0="" class="ltitle">The platform that yields record high income</p>
+                    <!-- <p data-v-8c1d3ba0="" class="ltitle">The platform that yields record high income</p> -->
                     <div data-v-8c1d3ba0="" class="main">
                         <div data-v-8c1d3ba0="" class="nav">
 
