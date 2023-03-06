@@ -75,7 +75,7 @@ console.log("{{ Auth::user() }}")
         </script>
 
 
-    <script src="{{ asset('js/frontend.js?ver=1.0.10') }}"></script>
+    <script src="{{ asset('js/frontend.js?ver=1.0.11') }}"></script>
 
 
 

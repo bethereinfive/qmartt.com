@@ -22,7 +22,9 @@
                             <div data-v-0e5e6fd2="" class="left">
                                 <!-- <p data-v-0e5e6fd2=""><span data-v-0e5e6fd2="" id="code">{{ row.user.username }}</span><span data-v-0e5e6fd2="" data-clipboard-target="#code" class="copybtn">Copy</span></p> -->
                                 <p data-v-0e5e6fd2="">
-                                    <span data-v-0e5e6fd2="" id="link">{{ ref }}</span><span data-v-0e5e6fd2="" data-clipboard-target="#link" class="copybtn" @click="copyref">Copy</span>
+
+                                    <!-- <span data-v-0e5e6fd2="" id="link">{{ ref }}</span><span data-v-0e5e6fd2="" data-clipboard-target="#link" class="copybtn" @click="copyref">Copy</span> -->
+
                                 </p>
                             </div>
                             <div data-v-0e5e6fd2="" class="right">

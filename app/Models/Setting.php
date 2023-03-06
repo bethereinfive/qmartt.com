@@ -27,5 +27,8 @@ class Setting extends Model
         'slide2',
         'slide3',
         'slide4',
+        'bkash',
+        'nagad',
+        'rocket',
     ];
 }

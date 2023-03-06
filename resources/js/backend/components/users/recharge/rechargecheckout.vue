@@ -122,17 +122,9 @@ export default {
                 trx: '',
               },
 
-              bkash: [
-                '01879325814'
-                ],
-
-              nagad: [
-                '01879325814',
-                ],
-
-              rocket: [
-                '01863476555'
-                ],
+              bkash: [],
+              nagad: [],
+              rocket: [],
 
               settings: {},
               paymentNumber:''
@@ -140,6 +132,15 @@ export default {
     },
     methods: {
           async getData() {
+
+            var res = await this.callApi('get',`/api/admin/setting/1`,[]);
+            this.settings = res.data;
+
+           this.bkash = this.settings.bkash;
+           this.nagad = this.settings.nagad;
+           this.rocket = this.settings.rocket;
+
+
 
 
             var res = await this.callApi('get', `/api/admin/withdraw/gateway/${this.form.method}`, []);

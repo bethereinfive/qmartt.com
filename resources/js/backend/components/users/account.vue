@@ -44,13 +44,15 @@
                                 <router-link :to="{name:'Withdraw'}" data-v-43965e0e="" class="btn">Withdraw</router-link>
                             </div>
                         </div>
+
                         <div data-v-43965e0e="" class="block3">
                             <div data-v-43965e0e="" class="left">
                                 <p data-v-43965e0e="">Join us customer service</p>
                                 <!-- <p data-v-43965e0e="">Don't miss the tips to yield high income</p> -->
                             </div>
-                            <a target="_blank" :href="settings.telegroup" data-v-43965e0e="" class="btn">Join Now</a>
+                            <a target="_blank" :href="settings.telesupport2" data-v-43965e0e="" class="btn">Join Now</a>
                         </div>
+
                         <!-- <div data-v-43965e0e="" class="behalf">
                             <p data-v-43965e0e="" class="p1"><span data-v-43965e0e="">Top up for your friends</span></p>
                             <div data-v-43965e0e="" class="p2">

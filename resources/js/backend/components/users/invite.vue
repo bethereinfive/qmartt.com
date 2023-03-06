@@ -9,7 +9,7 @@
 
                         <p data-v-211d8b7d="" class="p1">{{ ref }}</p>
 
-                        <p data-v-211d8b7d="" class="p2" @click="copyref">Invite now</p>
+                        <!-- <p data-v-211d8b7d="" class="p2" @click="copyref">Invite now</p> -->
                     </div>
 
                     <!-- <div data-v-211d8b7d="" class="rules">Rules</div> -->

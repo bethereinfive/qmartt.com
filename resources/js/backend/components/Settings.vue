@@ -171,6 +171,9 @@
                                 </div>
 
 
+
+
+
                                     <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="control-label col-form-label">Slider 4
@@ -182,6 +185,28 @@
                                             </label>
                                     </div>
                                 </div>
+
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label col-form-label">Bkash</label>
+                                            <multiselect v-model="form.bkash" tag-placeholder="Add this as new tag" placeholder="Search or add a tag"   :options="BkashOptions" :multiple="true" :taggable="true" @tag="addBkash"></multiselect>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label col-form-label">Nagad</label>
+                                            <multiselect v-model="form.nagad" tag-placeholder="Add this as new tag" placeholder="Search or add a tag"  :options="NagadOptions" :multiple="true" :taggable="true" @tag="addNagad"></multiselect>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label col-form-label">Rocket</label>
+                                            <multiselect v-model="form.rocket" tag-placeholder="Add this as new tag" placeholder="Search or add a tag"  :options="RocketOptions" :multiple="true" :taggable="true" @tag="addRocket"></multiselect>
+                                        </div>
+                                    </div>
 
 
                             <div class="col-md-12 mt-4">
@@ -200,6 +225,7 @@
     </div>
 </template>
 <script>
+
 export default {
     mounted() {
         this.getData();
@@ -210,11 +236,38 @@ export default {
                 new_regitration:'',
                 refer_bonus:'',
                 min_deposit:'',
+                bkash:[],
+                nagad:[],
+                rocket:[],
 
-            }
+            },
+            BkashOptions:[],
+            NagadOptions:[],
+            RocketOptions:[],
+
         }
     },
     methods: {
+
+        addBkash (newTag) {
+
+            const tag = newTag
+            this.BkashOptions.push(tag)
+            this.form.bkash.push(tag)
+            },
+
+        addNagad (newTag) {
+            const tag = newTag
+            this.NagadOptions.push(tag)
+            this.form.nagad.push(tag)
+            },
+
+        addRocket (newTag) {
+            const tag = newTag
+            this.RocketOptions.push(tag)
+            this.form.rocket.push(tag)
+            },
+
 
 
         FileSelected($event, parent_index){
