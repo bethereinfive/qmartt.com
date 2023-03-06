@@ -28,7 +28,7 @@
 
     {{-- <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.4/css/buttons.dataTables.min.css">
     <link rel="stylesheet" href="{{ asset('css/datatables.min.css') }}"> --}}
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css?ver=1.0.0') }}">
 <style>
             *{
                 --defaltColor:#0074BD;
@@ -54,7 +54,7 @@
 
 
 
-<script src="{{ asset('js/backend.js?ver=1.0.0') }}"></script>
+<script src="{{ asset('js/backend.js?ver=1.0.12') }}"></script>
 
 
 
