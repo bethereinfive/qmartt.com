@@ -11,7 +11,10 @@
                                 <div data-v-43965e0e="" id="avatar">
                                     <img data-v-43965e0e="" :src="$asseturl+'frontend2/static/img/smallLogo.png'" alt="" />
                                 </div>
-                                <div data-v-43965e0e="" id="message"><p data-v-43965e0e="">{{ row.user.mobile }}</p></div>
+                                <div data-v-43965e0e="" id="message">
+                                    <p data-v-43965e0e="">{{ row.user.mobile }}</p>
+                                    <p data-v-43965e0e="" style="color:white">{{ row.user.username }}</p>
+                                </div>
                             </div>
 
 
@@ -87,68 +90,23 @@
                         <router-link data-v-43965e0e="" :to="{name:'RechangePass'}" class="item"><p data-v-43965e0e="">Change the password</p></router-link>
 
 
+
+
                         <a v-if="settings.telegroup" data-v-43965e0e=""  :href="settings.telegroup" class="item"><p data-v-43965e0e="">Official Telegram Group</p></a>
                         <a v-if="settings.telesupport1" data-v-43965e0e=""  :href="settings.telesupport1" class="item"><p data-v-43965e0e="">Official Telegram Channel</p></a>
                         <a v-if="settings.telesupport2" data-v-43965e0e=""  :href="settings.telesupport2" class="item"><p data-v-43965e0e="">Customer Service</p></a>
                         <a v-if="settings.telesupport3" data-v-43965e0e=""  :href="settings.telesupport3" class="item"><p data-v-43965e0e="">Customer Service</p></a>
+
+                        <router-link data-v-43965e0e="" :to="{name:'invite'}" class="item"><p data-v-43965e0e="">Invite</p></router-link>
+
                         <!-- <a data-v-43965e0e="" href="/page?title=Introduction&amp;src=https%3A%2F%2Fh5.webfxx.com%2Fcertificate%2Findex.html" class="item"><p data-v-43965e0e="">Introduction</p></a> -->
                         <!-- <a data-v-43965e0e="" href="/page?title=Play%20guide&amp;src=https%3A%2F%2Fh5.webfxx.com%2FhowToPlay%2Findex.html" class="item"><p data-v-43965e0e="">Play guide</p></a> -->
-                        <a data-v-43965e0e="" href="#" class="item"><p data-v-43965e0e="">About us</p></a>
+                        <!-- <a data-v-43965e0e="" href="#" class="item"><p data-v-43965e0e="">About us</p></a> -->
                         <router-link :to="{name:'logout'}" data-v-43965e0e="" class="item"><p data-v-43965e0e="">Sign out</p></router-link>
                     </div>
                 </div>
-                <div data-v-43965e0e="" id="invite" style="display: none;">
-                    <div data-v-43965e0e="" class="hm"></div>
-                    <div data-v-43965e0e="" class="tc">
-                        <img data-v-43965e0e="" src="static/img/invite_bg.35b08855.png" alt="" />
-                        <img
-                            data-v-43965e0e=""
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAAllBMVEUAAAD////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AJcWoAAAAMXRSTlMABAgMFBcYGxwfICMkJygvMDc4T1BTVFdYb3N0d3uHj5ebq6+zt7/T19/j5+vv8/f7+rcFQwAAAZ9JREFUOMuVlVt7qjAQRXeVptZLa+1NOFbRekFiC+v//7k+iJikcD6aNzJrkszOZCN542mxOViwh83iSa3jdpnjjHx524hF66ICjscqoVhHv7n3E8A+nvYkqTeN9wCn9wC7SYFiNXDnBqsCSG/cuf4W2I3DXcY7YNt31ttCGTcdPC5he10zhe+XZiXeviGt64DypU2ztxKqiqIviNvVjeF0VmkNO0nqJ8ZHRh+RJO1gLUmmpBhKUkLmkRNLIknjgsJIWsJKkjS0HjmpP1ewlJRDpfODSzppA8ilGewvQYc0mZO0h5kWbsnjS9jjlMBCnzC9HqwCfE5T2OgAPQVkwKkHB1lyTzyTkQWclGMFR4VkyOkI3cHOW3cuZtNVHk9w8x/B3St0wibDTrwrdJrCZFjjJF3IIeRum5kM++Ad1w7dNjNF3bguJ5nMb9z6KUQfwcM2//rVU0j/9rg0h/K5jXstYe4aQAv56hpAd0upTGoUYqPQpGrbu3Pn7htsT9K8MtLHs5E+JmcjnTdYc/rbmtOosUITmr1pV3d2/X3M/MgPX0BUsYyBKgUAAAAASUVORK5CYII="
-                            alt=""
-                            class="close"
-                        />
-                        <div data-v-43965e0e="" class="main">
-                            <div data-v-43965e0e="" class="text"><p data-v-43965e0e="">Refer to a friend to join, and you can receive 6% commission from your friend's orders income. This varies according to your membership level.</p></div>
-                            <ul data-v-43965e0e="">
-                                <li data-v-43965e0e="">First Level Friends : 6%</li>
-                                <li data-v-43965e0e="">Second Level Friends : 3%</li>
-                                <li data-v-43965e0e="">Third Level Friends : 1%</li>
-                            </ul>
-                        </div>
-                        <div data-v-43965e0e="" class="bottom">
-                            <div data-v-43965e0e="" class="item">
-                                <p data-v-43965e0e="" id="code">3725086</p>
-                                <p data-v-43965e0e="">Invitation code</p>
-                                <div data-v-43965e0e="" data-clipboard-target="#code" class="btn copybtn">Copy</div>
-                            </div>
-                            <div data-v-43965e0e="" class="item">
-                                <p data-v-43965e0e="" id="link">https://webfxx.com/share?InviteCode=VIPLEVEL_3725086&amp;appid=18&amp;lang=en-GB</p>
-                                <p data-v-43965e0e="">Invitation link</p>
-                                <div data-v-43965e0e="" data-clipboard-target="#link" class="btn copybtn">Copy</div>
-                            </div>
-                        </div>
-                        <div data-v-43965e0e="" id="share">Share</div>
-                    </div>
-                </div>
-                <!----><!---->
-                <div data-v-894bc042="" data-v-43965e0e="" class="alertShareS" style="display: none;">
-                    <div data-v-894bc042="" class="hm"></div>
-                    <!---->
-                </div>
-                <div data-v-43965e0e="" class="join">
-                    <div data-v-43965e0e="" class="joinGif" style="display: none;">
-                        <a data-v-43965e0e="" target="_blank" href=""><img data-v-43965e0e="" src="static/img/fa_en-GB.82ca9478.gif" alt="" /></a>
-                    </div>
-                    <div data-v-43965e0e="" class="joinGif">
-                        <a data-v-43965e0e="" target="_blank" href="https://t.me/+cX4wwAzEOsJkMzVl"><img data-v-43965e0e="" src="static/img/te_en-GB.775c677c.gif" alt="" /></a>
-                    </div>
-                    <div data-v-43965e0e="" class="joinGif" style="display: none;">
-                        <a data-v-43965e0e="" target="_blank" href=""><img data-v-43965e0e="" src="static/img/wa_en-GB.01d7e40a.gif" alt="" /></a>
-                    </div>
-                    <div data-v-43965e0e="" class="joinGif" style="display: none;">
-                        <a data-v-43965e0e="" target="_blank" href=""><img data-v-43965e0e="" src="static/img/vi_en-GB.47aa56d6.gif" alt="" /></a>
-                    </div>
-                </div>
+
+
             </div>
     </div>
 </template>

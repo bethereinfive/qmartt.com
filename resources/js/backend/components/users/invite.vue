@@ -6,6 +6,9 @@
                     <div data-v-211d8b7d="" class="con">
                         <p data-v-211d8b7d="" class="money">৳{{ row.new_regitration }}</p>
                         <p data-v-211d8b7d="" class="p1">The value of each friend who tops up</p>
+
+                        <p data-v-211d8b7d="" class="p1">{{ ref }}</p>
+
                         <p data-v-211d8b7d="" class="p2" @click="copyref">Invite now</p>
                     </div>
 
@@ -50,7 +53,7 @@ export default {
 
     data() {
         return {
-            ref: 'https://midvalleyy.com/register',
+            ref: 'https://qmartt.com/register',
             row:{},
             popup:false
         }
@@ -60,7 +63,7 @@ export default {
           async getData() {
              var id = localStorage.getItem('userid');
             var res = await this.callApi('get', `/api/admin/user/${id}`, []);
-            this.ref = 'https://midvalleyy.com/register?ref='+res.data.user.username
+            this.ref = 'https://qmartt.com/register?ref='+res.data.user.username
             this.row = res.data;
 
         },
