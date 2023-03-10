@@ -6,7 +6,7 @@
     <title>QmarT</title>
     <meta name="google-site-verification" content="KlFD8HcyZl4za4AVCB5vKHA5bd--3nl7yzZSYVKZnVM" />
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend2/static/img/smallLogo.png') }}">
     <link rel="stylesheet" href="{{ asset('dashboard_asset/css/all.min.css') }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
